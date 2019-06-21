@@ -1,0 +1,3 @@
+DNA = "GATGGAACTTGACTACGTAAATT"
+RNA = DNA.replace("T", "U")
+print(RNA)
