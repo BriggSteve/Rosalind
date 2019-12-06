@@ -1,0 +1,12 @@
+from Bio import SeqIO
+from Bio.SeqUtils import GC
+
+array = ["Rosalind_xxxx", 0]
+
+for seqRecord in SeqIO.parse("filename.txt", "fasta"): #Change file name to fasta file name
+    if(GC(seqRecord.seq) > array[1]):
+        array[0] = seqRecord.id
+        array[1] = GC(seqRecord.seq)
+
+print(array[0])
+print(round(array[1], 6))
